@@ -1,0 +1,27 @@
+{
+  "name": "@kano/kwc-template",
+  "version": "1.0.0",
+  "main": "kwc-template.js",
+  "license": "MIT",
+  "scripts": {
+    "serve": "es6-server",
+    "serve-test": "web-tester serve **/*.test.js",
+    "test": "web-tester run **/*.test.js",
+    "test-ci": "yarn run --silent test > test-results.xml",
+    "lint": "eslint *.js",
+    "lint-ci": "yarn lint -f checkstyle -o eslint.xml",
+    "prepublishOnly": "yarn run test"
+  },
+  "resolutions": {
+    "eslint-config-airbnb-base": "13.1.0"
+  },
+  "dependencies": {
+    "@polymer/polymer": "^3.1.0"
+  },
+  "devDependencies": {
+    "@kano/eslint-config": "^1.0.0",
+    "eslint": "^5.12.1",
+    "@kano/web-tester": "^1.0.0-alpha.6",
+    "@kano/es6-server": "^1.0.1"
+  }
+}
